@@ -1,6 +1,5 @@
 .body {
   margin: 0;
-  background-color: #000000;
  } 
 
 .page {
@@ -16,6 +15,4 @@
   left: 0;
   width: 100%;
   heigth: 100%;
-  aspect-ratio:16/9;
-  background-color: #000000;
  } 
