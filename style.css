@@ -1,6 +1,7 @@
 html, body, iframe {
   margin: 0;
   padding: 0;
+  background-color: #000000;
   overflow: hidden;
 }
 #twitch-embed {
@@ -26,4 +27,5 @@ html, body, iframe {
   width: 100%;
   height: 100%;
   border: none;
+  background-color: #000000;
  } 
