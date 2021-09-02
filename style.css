@@ -23,10 +23,11 @@
 
  } 
 
-.video-container iframe {
+.iframe {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  heigth: 100%;
+  heigth: auto;
+  aspect-ratio:16/9;
  } 
