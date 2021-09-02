@@ -1,6 +1,5 @@
 html, body, iframe {
-  margin: 0;
-  padding: 0;
+  
   overflow: hidden;
 }
 #twitch-embed {
