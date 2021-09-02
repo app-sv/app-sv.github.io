@@ -1,6 +1,14 @@
-.body {
+html, body, iframe {
   margin: 0;
- } 
+  padding: 0;
+  overflow: hidden;
+}
+#twitch-embed {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
 
 .page {
     position: relative;
