@@ -1,5 +1,6 @@
 .body {
   margin: 0;
+  background-color: #000000;
  } 
 
 .iframe {
@@ -9,4 +10,5 @@
   width: 100%;
   heigth: auto;
   aspect-ratio:16/9;
+  background-color: #000000;
  } 
