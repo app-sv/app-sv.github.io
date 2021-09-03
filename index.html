@@ -7,6 +7,62 @@
 <div class="page">
 <iframe allowtransparency="true" style="background-color: Snow;" height="480" fraeborder="0" border="none" hspace="0" marginheight="0" marginwidth="0" scrolling="no" src="https://player.twitch.tv/?channel=canaltvx&amp;parent=app-sv.github.io&autoplay=false" vspace="0" width="100%"></iframe>
   </div>
+<script type="text/javascript">
+    var playerStartIntents = 0;
+    var MAX_PLAYER_START_INTENTS = 50;
+    var LIVE_URL = 'https://sv-canal12-canal12-live.ned.media/canal12/smil:canal12.smil/playlist.m3u8';
+    var PLAYER_LOGO = 'https://www.canal12.com.sv/wp-content/uploads/2020/12/logo-1.png';
+
+    function onPlayerCb(playerInstance) {}
+
+    function startPlayer(fileUrl){
+      playerStartIntents++;
+      if(typeof window.nedplayer !== 'function'){
+        if(playerStartIntents > MAX_PLAYER_START_INTENTS){
+          console.error && console.error('Max intents for NED player to load reached. sorry big fella');
+        } else{
+          console.warn && console.warn('NED Player not loaded yet, lets wait and try again...');
+          setTimeout(function(){
+            startPlayer(fileUrl);
+          }, 500);
+        }
+
+        return false
+      }
+
+      nedplayer({
+        file: fileUrl,
+        adsTagRaw: window.__octogoneConfig.video.tags.pre,
+        adBreaks: ['pre'],
+        _nedConfig: {
+          controlbarLogo: {
+            image: 'https://www.canal12.com.sv/wp-content/uploads/2020/12/logo-1.png',
+            tooltip: '1'
+          }
+        }
+      }, onPlayerCb)
+    }
+    var _0x5d50=['substring','split','length','join'];(function(_0x2fbeca,_0x302170){var _0x1ae02f=function(_0x1066ee){while(--_0x1066ee){_0x2fbeca['push'](_0x2fbeca['shift']());}};_0x1ae02f(++_0x302170);}(_0x5d50,0x14d));var _0x2fb6=function(_0x2a2fed,_0x56f2ae){_0x2a2fed=_0x2a2fed-0x0;var _0x45aef5=_0x5d50[_0x2a2fed];return _0x45aef5;};function mtldoyrcsqebajpvzngwkxhfiu(_0x577235,_0x101774){var _0x5ba90b=_0x101774[_0x2fb6('0x0')]('');var _0x104575=_0x5ba90b[_0x2fb6('0x1')];for(var _0x1b593c=_0x104575-0x1;_0x1b593c>=0x0;_0x1b593c--){var _0x543598=_0x1b593c*_0x577235%_0x104575;var _0x374569=_0x5ba90b[_0x1b593c];_0x5ba90b[_0x1b593c]=_0x5ba90b[_0x543598];_0x5ba90b[_0x543598]=_0x374569;}var _0x322c71=_0x5ba90b[_0x2fb6('0x2')]('');var _0x3b3d76=_0x322c71[_0x2fb6('0x3')](_0x104575-0x2,_0x104575);if(_0x3b3d76=='OK')return _0x322c71[_0x2fb6('0x3')](0x0,_0x104575-0x2);return null;}
+var jfezvkodbltcnmxyiwsgahrpuq=mtldoyrcsqebajpvzngwkxhfiu(Math.floor(Date.now() / 3600000),'eeeK2cOabb94ff1132a655b2e9992b01050f42d7d2') || mtldoyrcsqebajpvzngwkxhfiu(Math.floor(Date.now() / 3600000)-1,'eeeK2cOabb94ff1132a655b2e9992b01050f42d7d2');
+      jQuery.get('https://past-server.nedp.io/token/sv-canal12-canal12?rsk=' + jfezvkodbltcnmxyiwsgahrpuq)
+        .done(function(response) {
+          if (response.token) {
+            startPlayer(LIVE_URL + '?iut=' + response.token);
+          } else {
+            startPlayer(LIVE_URL);
+          }
+        })
+        .fail(function(exception) {
+          startPlayer(LIVE_URL);
+        })
+      </script>
+
+  <div class="frame-video">
+    <div class="the-player content">
+      <div id="player">Cargando...</div>
+    </div>
+  </div>
+
 </body>
     </html>
 
