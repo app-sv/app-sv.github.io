@@ -7,7 +7,7 @@ html, body, iframe {
 
 .page {
     position: relative;
-    padding-bottom: 47.10%; /* proportion value to aspect ratio 16:9 (9 / 16 = 0.5625 or 56.25%) */
+    padding-bottom: 49.10%; /* proportion value to aspect ratio 16:9 (9 / 16 = 0.5625 or 56.25%) */
     height: 0;
     background-color: #000000;
     overflow: hidden;
