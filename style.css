@@ -1,29 +1,4 @@
-html, body, iframe {
-  margin: 0;
-  padding: 0;
-  background-color: #FFFFFF;
-  overflow: hidden;
-}
 
-.page {
-    position: relative;
-    padding-bottom: 49.10%; /* proportion value to aspect ratio 16:9 (9 / 16 = 0.5625 or 56.25%) */
-    height: 0;
-    background-color: #000000;
-    overflow: hidden;
-}
-
-.page iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-  background-color: #000000;
- } 
 
 .video-responsive {
 position: relative;
